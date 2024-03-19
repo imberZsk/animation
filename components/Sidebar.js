@@ -4,9 +4,10 @@ import SidebarSearchField from '@/components/SidebarSearchField'
 import SidebarNoteList from '@/components/SidebarNoteList'
 import EditButton from '@/components/EditButton'
 import NoteListSkeleton from '@/components/NoteListSkeleton'
+import LocaleSwitcher from '@/components/locale-switcher'
 
 // // 移除数据请求部分，为 SidebarNoteList 添加 Suspense 以及 fallback UI NoteListSkeleton
-export default async function Sidebar() {
+export default async function Sidebar({ lng }) {
   return (
     <>
       <section className="col sidebar">
@@ -32,6 +33,9 @@ export default async function Sidebar() {
             <SidebarNoteList />
           </Suspense>
         </nav>
+        <div className="px-16">
+          <LocaleSwitcher lang={lng}></LocaleSwitcher>
+        </div>
       </section>
     </>
   )

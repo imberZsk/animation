@@ -2,7 +2,9 @@
   "compilerOptions": {
     "paths": {
       "@/components/*": ["./components/*"],
-      "@/lib/*": ["./lib/*"]
+      "@/lib/*": ["./lib/*"],
+      "@/actions": ["./app/[lng]/actions.js"],
+      "@/*": ["/*"]
     }
   }
 }

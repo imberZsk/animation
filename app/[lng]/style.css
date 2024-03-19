@@ -690,3 +690,7 @@ ul.notes-list {
     opacity: 1;
   }
 }
+.px-16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
