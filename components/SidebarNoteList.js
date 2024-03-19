@@ -40,33 +40,33 @@
 //   return <SidebarNoteListFilter notes={notes} />
 // }
 
-// import SidebarNoteListFilter from '@/components/SidebarNoteListFilter'
-// import SidebarNoteItem from '@/components/SidebarNoteItem'
-// import { getAllNotes } from '@/lib/redis'
-// import { sleep } from '@/lib/utils'
+import SidebarNoteListFilter from '@/components/SidebarNoteListFilter'
+import SidebarNoteItem from '@/components/SidebarNoteItem'
+import { getAllNotes } from '@/lib/redis'
+import { sleep } from '@/lib/utils'
 
-// export default async function NoteList() {
-//   await sleep(2000)
-//   const notes = await getAllNotes()
+export default async function NoteList() {
+  await sleep(2000)
+  const notes = await getAllNotes()
 
-//   if (Object.entries(notes).length == 0) {
-//     return <div className="notes-empty">{'No notes created yet!'}</div>
-//   }
+  if (Object.entries(notes).length == 0) {
+    return <div className="notes-empty">{'No notes created yet!'}</div>
+  }
 
-//   return (
-//     <SidebarNoteListFilter>
-//       {Object.entries(notes).map(([noteId, note], index) => {
-//         return (
-//           <SidebarNoteItem
-//             noteId={noteId}
-//             note={JSON.parse(note)}
-//             key={index}
-//           />
-//         )
-//       })}
-//     </SidebarNoteListFilter>
-//   )
-// }
+  return (
+    <SidebarNoteListFilter>
+      {Object.entries(notes).map(([noteId, note], index) => {
+        return (
+          <SidebarNoteItem
+            noteId={noteId}
+            note={JSON.parse(note)}
+            key={index}
+          />
+        )
+      })}
+    </SidebarNoteListFilter>
+  )
+}
 
 // 尝试5
 // import SidebarNoteListFilter from '@/components/SidebarNoteListFilter'
