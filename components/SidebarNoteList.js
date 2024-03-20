@@ -45,7 +45,7 @@ import SidebarNoteItem from '@/components/SidebarNoteItem'
 import { getAllNotes } from '@/lib/redis'
 import { sleep } from '@/lib/utils'
 
-export default async function NoteList() {
+export default async function NoteList({ lng }) {
   await sleep(2000)
   const notes = await getAllNotes()
 
@@ -58,6 +58,7 @@ export default async function NoteList() {
       {Object.entries(notes).map(([noteId, note], index) => {
         return (
           <SidebarNoteItem
+            lng={lng}
             noteId={noteId}
             note={JSON.parse(note)}
             key={index}

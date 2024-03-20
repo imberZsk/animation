@@ -2,12 +2,15 @@
 
 import { useState, useRef, useEffect, useTransition } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
+import { i18n } from '@/i18n-config.js'
 
-export default function SidebarNoteContent({
+const { defaultLocale } = i18n
+export default function SidebarNoteItemContent({
   id,
   title,
   children,
-  expandedChildren
+  expandedChildren,
+  lng
 }) {
   const router = useRouter()
   const pathname = usePathname()
@@ -57,7 +60,8 @@ export default function SidebarNoteContent({
           if (sidebarToggle) {
             sidebarToggle.checked = true
           }
-          router.push(`/note/${id}`)
+          // router.push(`${lng === defaultLocale ? '' : `/${lng}`}/note/${id}`)
+          router.push(`/${lng}/note/${id}`)
         }}
       >
         Open note for preview
