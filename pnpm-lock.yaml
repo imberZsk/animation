@@ -20,6 +20,9 @@ dependencies:
   million:
     specifier: ^3.0.6
     version: 3.0.6
+  mime:
+    specifier: ^4.0.1
+    version: 4.0.1
   negotiator:
     specifier: ^0.6.3
     version: 0.6.3
@@ -2169,6 +2172,12 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
+    dev: false
+
+  /mime@4.0.1:
+    resolution: {integrity: sha512-5lZ5tyrIfliMXzFtkYyekWbtRXObT9OWa8IwQ5uxTBDHucNNwniRqo0yInflj+iYi5CBa6qxadGzGarDfuEOxA==}
+    engines: {node: '>=16'}
+    hasBin: true
     dev: false
 
   /minimatch@3.1.2:
