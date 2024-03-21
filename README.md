@@ -10,4 +10,5 @@
 - [x] 高性能的`SSG`国际化，依靠`generateStaticParams`
 - [x] [server action](https://github.com/vercel/next.js/tree/canary/examples/server-actions-upload/app)文件上传
 - [x] 使用 `strapi` 作为数据源，`mysql`作为数据库，`prisma`作为`ORM`
-      ![Alt text](image.png)
+
+![Alt text](image.png)
