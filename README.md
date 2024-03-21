@@ -4,7 +4,7 @@
 
 ## 项目亮点
 
-- [x] `server action`处理数据，减少`API`层逻辑；`revalidatePath`和`router.refresh()`在不同情况下刷新缓存
+- [x] `server action`处理数据，减少`API`层逻辑；`revalidatePath`和`router.refresh`在不同情况下刷新缓存
 - [x] `Zod`处理表单数据校验，`useFormState`处理表单信息，`useFormStatus`处理过度状态
 - [x] 合理服务端组件和客户端组件拆分，减少`bundle`大小，如`dayjs`包
 - [x] 高性能的`SSG`国际化，依靠`generateStaticParams`
