@@ -1,5 +1,5 @@
 // import SidebarNoteItem from '@/components/SidebarNoteItem'
-// import { getAllNotes } from '@/lib/redis'
+// import { getAllNotes } from '@/lib/strapi'
 
 // export default async function NoteList() {
 //   const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
@@ -26,7 +26,7 @@
 // }
 
 // import SidebarNoteListFilter from '@/components/SidebarNoteListFilter'
-// import { getAllNotes } from '@/lib/redis'
+// import { getAllNotes } from '@/lib/strapi'
 // import { sleep } from '@/lib/utils'
 
 // export default async function NoteList() {
@@ -42,7 +42,7 @@
 
 import SidebarNoteListFilter from '@/components/SidebarNoteListFilter'
 import SidebarNoteItem from '@/components/SidebarNoteItem'
-import { getAllNotes } from '@/lib/redis'
+import { getAllNotes } from '@/lib/strapi'
 import { sleep } from '@/lib/utils'
 
 export default async function NoteList({ lng }) {
@@ -71,7 +71,7 @@ export default async function NoteList({ lng }) {
 
 // 尝试5
 // import SidebarNoteListFilter from '@/components/SidebarNoteListFilter'
-// import { getAllNotes } from '@/lib/redis'
+// import { getAllNotes } from '@/lib/strapi'
 // import { sleep } from '@/lib/utils'
 // import SidebarNoteItemHeader from '@/components/SidebarNoteItemHeader'
 
