@@ -2,7 +2,7 @@ import { match } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
 import { NextResponse } from 'next/server'
 import { i18n } from '@/i18n-config.js'
-// export { auth as middleware } from 'auth'
+export { auth as middleware } from 'auth'
 
 const { locales, defaultLocale } = i18n
 
@@ -19,32 +19,32 @@ function getLocale(request) {
   return match(languages, locales, defaultLocale)
 }
 
-export function middleware(request) {
-  const { pathname } = request.nextUrl
-  // 判断请求路径中是否已存在语言，已存在语言则跳过
-  const pathnameHasLocale = locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-  )
+// export function middleware(request) {
+//   const { pathname } = request.nextUrl
+//   // 判断请求路径中是否已存在语言，已存在语言则跳过
+//   const pathnameHasLocale = locales.some(
+//     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+//   )
 
-  if (pathnameHasLocale) return
+//   if (pathnameHasLocale) return
 
-  // 如果是 public 文件，不重定向
-  if (
-    publicFile.test(pathname) &&
-    excludeFile.indexOf(pathname.substr(1)) == -1
-  )
-    return
+//   // 如果是 public 文件，不重定向
+//   if (
+//     publicFile.test(pathname) &&
+//     excludeFile.indexOf(pathname.substr(1)) == -1
+//   )
+//     return
 
-  // 获取匹配的 locale
-  const locale = getLocale(request)
-  request.nextUrl.pathname = `/${locale}${pathname}`
-  // 默认语言不重定向
-  if (locale == defaultLocale) {
-    return NextResponse.rewrite(request.nextUrl)
-  }
-  // 重定向，如 /products 重定向到 /en-US/products
-  return Response.redirect(request.nextUrl)
-}
+//   // 获取匹配的 locale
+//   const locale = getLocale(request)
+//   request.nextUrl.pathname = `/${locale}${pathname}`
+//   // 默认语言不重定向
+//   if (locale == defaultLocale) {
+//     return NextResponse.rewrite(request.nextUrl)
+//   }
+//   // 重定向，如 /products 重定向到 /en-US/products
+//   return Response.redirect(request.nextUrl)
+// }
 
 export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']

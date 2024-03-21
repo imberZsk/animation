@@ -34,7 +34,7 @@ export default async function Sidebar({ lng }) {
           </Suspense>
         </nav>
         <div className="px-16">
-          <LocaleSwitcher lang={lng}></LocaleSwitcher>
+          {/* <LocaleSwitcher lang={lng}></LocaleSwitcher> */}
         </div>
         <SidebarImport />
       </section>

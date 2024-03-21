@@ -1,4 +1,4 @@
-import { getDictionary } from '../../get-dictionary'
+import { getDictionary } from '../get-dictionary'
 
 export default async function Page({ params: { lng } }) {
   const data = await getDictionary(lng)

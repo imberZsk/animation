@@ -117,7 +117,7 @@
 import { useRef } from 'react'
 import { useFormStatus } from 'react-dom'
 import { useRouter } from 'next/navigation'
-import { importNote } from '@/actions'
+import { importNote } from 'app/actions'
 
 function Submit() {
   const { pending } = useFormStatus()

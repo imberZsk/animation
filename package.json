@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
+    "@prisma/client": "5.11.0",
     "dayjs": "^1.11.10",
     "ioredis": "^5.3.2",
     "marked": "^12.0.1",
@@ -18,6 +19,7 @@
     "negotiator": "^0.6.3",
     "next": "14.1.3",
     "next-auth": "5.0.0-beta.15",
+    "prisma": "^5.11.0",
     "react": "^18",
     "react-dom": "^18",
     "sanitize-html": "^2.12.1",

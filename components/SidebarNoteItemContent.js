@@ -61,7 +61,8 @@ export default function SidebarNoteItemContent({
             sidebarToggle.checked = true
           }
           // router.push(`${lng === defaultLocale ? '' : `/${lng}`}/note/${id}`)
-          router.push(`/${lng}/note/${id}`)
+          // router.push(`/${lng}/note/${id}`)
+          router.push(`/note/${id}`)
         }}
       >
         Open note for preview
