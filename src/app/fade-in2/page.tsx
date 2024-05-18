@@ -93,7 +93,7 @@ export default function FadeIn() {
   return (
     <article className="bg-stone-900 text-white w-screen overflow-x-hidden text-center">
       <section className="text-6xl font-bold flex justify-center items-center h-screen title1">
-        第一屏
+        渐入效果（2）
       </section>
       <section className="flex justify-center items-center">
         <div className="grid grid-cols-2 grid-rows-2 w-[90vw] h-[90vw] lg:w-[1280px] lg:h-[800px] gap-2 lg:gap-4">
