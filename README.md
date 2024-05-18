@@ -1,6 +1,4 @@
-## 已有效果
-
-[codesandbox 效果地址](https://projects.codesandbox.io/)
+![](public/md.gif)
 
 ## commit
 
