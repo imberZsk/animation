@@ -27,7 +27,7 @@ export default function FadeIn() {
     })
   })
   return (
-    <article className="bg-stone-900 text-white">
+    <article className="bg-stone-900 text-white w-screen overflow-x-hidden">
       <section className="h-screen pt-10 md:pt-20">
         <div
           className="text-center font-bold text-3xl mb-4 md:mb-10 md:text-6xl"
