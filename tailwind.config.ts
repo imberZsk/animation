@@ -71,15 +71,6 @@ const config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out'
-      },
-      fontSize: {
-        xs: '1.2rem',
-        sm: '1.4rem',
-        md: '1.6rem',
-        lg: '2.0rem',
-        xl: '2.4rem',
-        '2xl': '3.6rem',
-        '3xl': '4.8rem'
       }
     }
   },
