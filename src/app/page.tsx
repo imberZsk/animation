@@ -52,7 +52,7 @@ export default function Page(): JSX.Element {
         </div>
 
         <div className="rounded-lg overflow-hidden border border-gray-400">
-          <Link href="/fade-in">
+          <Link href="/pin2">
             <div className="w-full h-[45vw] lg:h-[calc((90vw_-_32px_-_6px)/3/2)]">
               <Image
                 src="/fade-in.gif"
