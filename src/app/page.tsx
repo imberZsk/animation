@@ -51,7 +51,7 @@ export default function Page(): JSX.Element {
           </Link>
         </div>
 
-        <div className="rounded-lg overflow-hidden border border-gray-400">
+        {/* <div className="rounded-lg overflow-hidden border border-gray-400">
           <Link href="/pin2">
             <div className="w-full h-[45vw] lg:h-[calc((90vw_-_32px_-_6px)/3/2)]">
               <Image
@@ -64,7 +64,7 @@ export default function Page(): JSX.Element {
             </div>
             <p className="p-4 text-lg">pin效果（2）</p>
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   )
