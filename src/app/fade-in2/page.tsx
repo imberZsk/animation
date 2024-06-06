@@ -91,24 +91,24 @@ export default function FadeIn() {
     })
   })
   return (
-    <article className="bg-stone-900 text-white w-screen overflow-x-hidden text-center">
-      <section className="text-6xl font-bold flex justify-center items-center h-screen title1">
-        渐入效果（2）
+    <article className="w-screen overflow-x-hidden bg-stone-900 text-center text-white">
+      <section className="title1 flex h-screen items-center justify-center text-6xl font-bold">
+        渐入与滚动动画效果
       </section>
-      <section className="flex justify-center items-center">
-        <div className="grid grid-cols-2 grid-rows-2 w-[90vw] h-[90vw] lg:w-[1280px] lg:h-[800px] gap-2 lg:gap-4">
-          <div className="bg-[#252525] h-full item1"></div>
-          <div className="bg-[#252525] h-full item2"></div>
-          <div className="bg-[#252525] h-full item3"></div>
-          <div className="bg-[#252525] h-full item4"></div>
+      <section className="flex items-center justify-center">
+        <div className="grid h-[90vw] w-[90vw] grid-cols-2 grid-rows-2 gap-2 lg:h-[800px] lg:w-[1280px] lg:gap-4">
+          <div className="item1 h-full bg-[#252525]"></div>
+          <div className="item2 h-full bg-[#252525]"></div>
+          <div className="item3 h-full bg-[#252525]"></div>
+          <div className="item4 h-full bg-[#252525]"></div>
         </div>
       </section>
-      <section className="flex justify-center items-center mt-20 mb-60">
-        <div className="grid w-[90vw] h-[45vw] lg:w-[1280px] lg:h-[400px] grid-cols-3 grid-rows-2 gap-2">
+      <section className="mb-60 mt-20 flex items-center justify-center">
+        <div className="grid h-[45vw] w-[90vw] grid-cols-3 grid-rows-2 gap-2 lg:h-[400px] lg:w-[1280px]">
           {Array(6)
             .fill(0)
             .map((item, index) => {
-              return <div key={index} className="bg-[#252525] item5"></div>
+              return <div key={index} className="item5 bg-[#252525]"></div>
             })}
         </div>
       </section>

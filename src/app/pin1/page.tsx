@@ -23,11 +23,7 @@ export default function Pin() {
     tl.from('.section15_img_wrapper', {
       width: `${window.innerWidth}px`,
       height: `${window.innerHeight}px`,
-      x:
-        window.innerWidth -
-        document
-          .querySelector('.section15_img_wrapper')!
-          .getBoundingClientRect().right,
+      x: window.innerWidth - document.querySelector('.section15_img_wrapper')!.getBoundingClientRect().right,
       borderRadius: 0
     })
 
@@ -45,9 +41,9 @@ export default function Pin() {
   })
 
   return (
-    <article className="bg-stone-900 text-white w-screen overflow-x-hidden text-center">
-      <section className="text-6xl font-bold flex justify-center items-center h-screen title1">
-        pin效果（1）
+    <article className="w-screen overflow-x-hidden bg-stone-900 text-center text-white">
+      <section className="title1 flex h-screen items-center justify-center text-6xl font-bold">
+        滚动钉住动画效果
       </section>
       <section className="section15 relative flex h-screen items-center bg-white text-center">
         <div className="relative mx-auto w-[1280px]">
