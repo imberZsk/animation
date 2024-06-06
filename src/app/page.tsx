@@ -34,9 +34,9 @@ export default function Page(): JSX.Element {
         </div>
 
         <div className="overflow-hidden rounded-lg border border-gray-400">
-          <Link href="/fix">
+          <Link href="/pin2">
             <div className="h-[45vw] w-full lg:h-[calc((90vw_-_32px_-_6px)/3/2)]">
-              <Image src="/fix.gif" width={600} height={400} alt="normal" className="h-full w-full object-cover" />
+              <Image src="/pin2.gif" width={600} height={400} alt="normal" className="h-full w-full object-cover" />
             </div>
             <p className="p-4 text-lg">动态叠层滚动效果</p>
           </Link>
