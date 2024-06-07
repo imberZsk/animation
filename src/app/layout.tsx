@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="zh" suppressHydrationWarning>
       <link rel="canonical" href="https://imber.top"></link>
       <body suppressHydrationWarning>
         <ThemeProvider
