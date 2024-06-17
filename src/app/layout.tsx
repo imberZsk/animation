@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import GsapPlugin from '@/components/gsap-plugin'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: 'imber | animation',
@@ -17,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="zh" suppressHydrationWarning>
       <link rel="canonical" href="https://imber.top"></link>
+      <GoogleTagManager gtmId="GTM-NJ7PWQ3B" />
       <body suppressHydrationWarning>
         <GoogleAnalytics gaId="G-EZLJ1D6L6Y" />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
