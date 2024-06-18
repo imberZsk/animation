@@ -7,7 +7,7 @@ export default function Page({ params: { id } }: { params: { id: string } }) {
   return (
     <Modal>
       <Image
-        src={`/${id}.gif`}
+        src={`/animations/${id}.gif`}
         width={600}
         height={400}
         alt="normal"
