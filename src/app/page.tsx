@@ -7,7 +7,7 @@ export default function Page(): JSX.Element {
     { href: '/animations/fade-in', src: '/animations/fade-in.gif', name: '渐入效果' },
     { href: '/animations/fade-in2', src: '/animations/fade-in2.gif', name: '渐入与滚动动画效果' },
     { href: '/animations/pin1', src: '/animations/pin1.gif', name: '滚动钉住动画效果' },
-    { href: '/animations/pin2', src: '/animations/fix.gif', name: '动态叠层滚动效果' }
+    { href: '/animations/pin2', src: '/animations/pin2.gif', name: '动态叠层滚动效果' }
   ]
 
   return (
