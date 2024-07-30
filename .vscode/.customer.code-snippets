@@ -1,0 +1,17 @@
+{
+  "rt": {
+    "prefix": "rt",
+    "body": [
+      "const ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/} = () => {",
+      "  return (",
+      "    <div>",
+      "      <div></div>",
+      "    </div>",
+      "  )",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}"
+    ],
+    "description": "rt"
+  }
+}
