@@ -19,7 +19,8 @@ export const metadata: Metadata = {
       url: `${process.env.REAL_WEBSITE_URL}/avatar.jpeg`,
       width: 1200,
       height: 630,
-      alt: 'imber-animation'
+      alt: 'imber-animation',
+      type: 'image/jpeg'
     }
   },
   metadataBase: new URL(`${process.env.REAL_WEBSITE_URL}`),
