@@ -7,7 +7,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: {
-    default: 'home',
+    default: 'home| imber-animation',
     template: '%s | imber-animation'
   },
   description: 'web 动画作品展示',
@@ -15,7 +15,12 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: process.env.REAL_WEBSITE_URL,
     creator: '@imberZsk',
-    images: `${process.env.REAL_WEBSITE_URL}/avatar.jpeg`
+    images: {
+      url: `${process.env.REAL_WEBSITE_URL}/avatar.jpeg`,
+      width: 1200,
+      height: 630,
+      alt: 'imber-animation'
+    }
   },
   metadataBase: new URL(`${process.env.REAL_WEBSITE_URL}`),
   openGraph: {
