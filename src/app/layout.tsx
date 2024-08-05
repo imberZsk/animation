@@ -6,7 +6,10 @@ import GsapPlugin from '@/components/gsap-plugin'
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
-  title: '%s | imber',
+  title: {
+    default: 'home',
+    template: '%s | imber-animation'
+  },
   description: 'web 动画作品展示',
   twitter: {
     card: 'summary_large_image',

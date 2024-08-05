@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'fade in'
+  title: 'pin1'
 }
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return <>{children}</>
