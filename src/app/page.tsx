@@ -1,6 +1,13 @@
-'use client'
 import Link from 'next/link'
 import Image from 'next/image'
+
+export const metadata = {
+  metadataBase: new URL(`${process.env.REAL_WEBSITE_URL}`),
+  openGraph: {
+    type: 'website',
+    images: '/opengraph-image.jpeg'
+  }
+}
 
 export default function Page(): JSX.Element {
   const arr = [

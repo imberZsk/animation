@@ -56,39 +56,29 @@ export default function FadeIn() {
   })
 
   return (
-    <article className="bg-stone-900 text-white w-screen overflow-x-hidden text-center">
+    <article className="w-screen overflow-x-hidden bg-stone-900 text-center text-white">
       <section>
         <div className="pt-10 md:pt-20">
-          <div className="font-bold text-3xl mb-4 md:mb-10 md:text-6xl title1">
-            {section1.title}
-          </div>
-          <div className="desc1 text-center font-bold text-md md:text-2xl mb-2 md:mb-8 text-gray-300">
+          <div className="title1 mb-4 text-3xl font-bold md:mb-10 md:text-6xl">{section1.title}</div>
+          <div className="desc1 text-md mb-2 text-center font-bold text-gray-300 md:mb-8 md:text-2xl">
             {section1.desc}
           </div>
           {section1.content.map((item, index) => {
             return (
-              <div
-                key={index}
-                className="text-center font-bold text-sm leading-6 md:leading-10 item md:text-xl"
-              >
+              <div key={index} className="item text-center text-sm font-bold leading-6 md:text-xl md:leading-10">
                 {item}
               </div>
             )
           })}
         </div>
         <div className="pt-10">
-          <div className="font-bold text-3xl mb-4 md:mb-10 md:text-6xl title2">
-            {section2.title}
-          </div>
-          <div className="text-center desc2 font-bold text-md md:text-2xl mb-2 md:mb-8 text-gray-300">
+          <div className="title2 mb-4 text-3xl font-bold md:mb-10 md:text-6xl">{section2.title}</div>
+          <div className="desc2 text-md mb-2 text-center font-bold text-gray-300 md:mb-8 md:text-2xl">
             {section2.desc}
           </div>
           {section2.content.map((item, index) => {
             return (
-              <div
-                key={index}
-                className="text-center font-bold text-sm leading-6 md:leading-10 md:text-xl item2"
-              >
+              <div key={index} className="item2 text-center text-sm font-bold leading-6 md:text-xl md:leading-10">
                 {item}
               </div>
             )

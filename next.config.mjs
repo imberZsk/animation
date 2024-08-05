@@ -27,6 +27,12 @@ const nextConfig = {
         hostname: 'cimg2.res.meizu.com',
         port: '',
         pathname: '/www/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'ssm.res.meizu.com',
+        port: '',
+        pathname: '/**'
       }
     ]
   }
