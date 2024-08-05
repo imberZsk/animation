@@ -15,7 +15,12 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: process.env.REAL_WEBSITE_URL,
     creator: '@imberZsk',
-    images: `${process.env.REAL_WEBSITE_URL}/md.gif`
+    images: `${process.env.REAL_WEBSITE_URL}/avatar.jpeg`
+  },
+  metadataBase: new URL(`${process.env.REAL_WEBSITE_URL}`),
+  openGraph: {
+    type: 'website',
+    images: '/opengraph-image.jpeg'
   }
 }
 
