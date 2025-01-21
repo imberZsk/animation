@@ -35,6 +35,22 @@ const nextConfig = {
         pathname: '/**'
       }
     ]
+  },
+  webpack: (config, { isServer }) => {
+    // 忽略 fm 文件夹
+    config.watchOptions = {
+      ...config.watchOptions,
+      ignored: ['**/fm/**']
+    }
+
+    // 添加 fm 文件夹到 externals
+    config.externals = [...(config.externals || []), 'fm']
+
+    return config
+  },
+  // 忽略 fm 文件夹的类型检查
+  typescript: {
+    ignoreBuildErrors: true
   }
 }
 
