@@ -1,8 +1,8 @@
 import { Suspense } from 'react'
 
 export const metadata = {
-  title: 'fade in',
-  description: 'fade in 动画',
+  title: '基础动画',
+  description: '基础动画',
   metadataBase: new URL(`${process.env.REAL_WEBSITE_URL}`),
   twitter: {
     card: 'summary_large_image',
