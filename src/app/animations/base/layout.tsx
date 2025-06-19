@@ -1,3 +1,5 @@
+import { Suspense } from 'react'
+
 export const metadata = {
   title: 'fade in',
   description: 'fade in 动画',
@@ -6,21 +8,21 @@ export const metadata = {
     card: 'summary_large_image',
     site: process.env.REAL_WEBSITE_URL,
     images: {
-      url: `/animations/fade-in.png`,
+      url: `/animations/base.png`,
       width: 1280,
       height: 640,
-      alt: 'fade-in',
+      alt: 'base',
       type: 'image/png'
     }
   },
   openGraph: {
     type: 'website',
-    images: `/animations/fade-in.png`
+    images: `/animations/base.png`
   }
 }
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  return <>{children}</>
+  return <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
 }
 
 export default Layout

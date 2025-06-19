@@ -11,7 +11,7 @@ import Image from 'next/image'
 
 export default function Page(): JSX.Element {
   const arr = [
-    { href: '/animations/fade-in', src: '/animations/fade-in.png', name: '渐入效果' },
+    { href: '/animations/base', src: '/animations/base.png', name: '渐入效果' },
     { href: '/animations/fade-in2', src: '/animations/fade-in2.png', name: '渐入与滚动动画效果' },
     { href: '/animations/pin1', src: '/animations/pin1.png', name: '滚动钉住动画效果' },
     { href: '/animations/pin2', src: '/animations/pin2.png', name: '动态叠层滚动效果' }
