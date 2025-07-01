@@ -1,23 +1,15 @@
 import { Suspense } from 'react'
 
 export const metadata = {
-  title: '基础动画',
-  description: '基础动画',
+  title: '时间轴动画',
+  description: '时间轴动画',
   metadataBase: new URL(`${process.env.REAL_WEBSITE_URL}`),
   twitter: {
     card: 'summary_large_image',
-    site: process.env.REAL_WEBSITE_URL,
-    images: {
-      url: `/animations/base.png`,
-      width: 1280,
-      height: 640,
-      alt: 'base',
-      type: 'image/png'
-    }
+    site: process.env.REAL_WEBSITE_URL
   },
   openGraph: {
-    type: 'website',
-    images: `/animations/base.png`
+    type: 'website'
   }
 }
 

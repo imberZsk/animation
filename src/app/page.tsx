@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 export default function Page(): JSX.Element {
   const arr = [
-    { href: '/animations/base', src: '/animations/base.mov', name: '入场动画' }
+    { href: '/animations/timeline', src: '/animations/timeline.mov', name: '时间轴动画' }
     // { href: '/animations/fade-in2', src: '/animations/fade-in2.png', name: '渐入与滚动动画效果' },
     // { href: '/animations/pin1', src: '/animations/pin1.png', name: '滚动钉住动画效果' },
     // { href: '/animations/pin2', src: '/animations/pin2.png', name: '动态叠层滚动效果' }
