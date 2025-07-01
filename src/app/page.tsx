@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 // export const metadata = {
 //   metadataBase: new URL(`${process.env.REAL_WEBSITE_URL}`),
@@ -11,10 +10,10 @@ import Image from 'next/image'
 
 export default function Page(): JSX.Element {
   const arr = [
-    { href: '/animations/base', src: '/animations/base.png', name: '渐入效果' },
-    { href: '/animations/fade-in2', src: '/animations/fade-in2.png', name: '渐入与滚动动画效果' },
-    { href: '/animations/pin1', src: '/animations/pin1.png', name: '滚动钉住动画效果' },
-    { href: '/animations/pin2', src: '/animations/pin2.png', name: '动态叠层滚动效果' }
+    { href: '/animations/base', src: '/animations/base.mov', name: '入场动画' }
+    // { href: '/animations/fade-in2', src: '/animations/fade-in2.png', name: '渐入与滚动动画效果' },
+    // { href: '/animations/pin1', src: '/animations/pin1.png', name: '滚动钉住动画效果' },
+    // { href: '/animations/pin2', src: '/animations/pin2.png', name: '动态叠层滚动效果' }
   ]
 
   return (
@@ -27,16 +26,18 @@ export default function Page(): JSX.Element {
             <div className="overflow-hidden rounded-lg border border-gray-400" key={index}>
               <Link href={item.href}>
                 <div className="h-[45vw] w-full lg:h-[calc((90vw_-_32px_-_6px)/3/2)]">
-                  <Image
+                  <video
                     src={item.src}
                     width={600}
                     height={400}
-                    alt="normal"
                     className="h-full w-full object-cover"
-                    priority
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                   />
                 </div>
-                <p className="p-4 text-lg">{item.name}</p>
+                {/* <p className="p-4 text-lg">{item.name}</p> */}
               </Link>
             </div>
           )
