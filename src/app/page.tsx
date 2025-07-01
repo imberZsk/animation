@@ -1,24 +1,15 @@
 import Link from 'next/link'
 
-// export const metadata = {
-//   metadataBase: new URL(`${process.env.REAL_WEBSITE_URL}`),
-//   openGraph: {
-//     type: 'website',
-//     images: '/opengraph-image.jpeg'
-//   }
-// }
-
 export default function Page(): JSX.Element {
   const arr = [
-    { href: '/animations/timeline', src: '/animations/timeline.mov', name: '时间轴动画' }
-    // { href: '/animations/fade-in2', src: '/animations/fade-in2.png', name: '渐入与滚动动画效果' },
-    // { href: '/animations/pin1', src: '/animations/pin1.png', name: '滚动钉住动画效果' },
-    // { href: '/animations/pin2', src: '/animations/pin2.png', name: '动态叠层滚动效果' }
+    { href: '/animations/text', src: '/animations/text.mov', name: '各种文字动画' },
+    { href: '/animations/timeline', src: '/animations/timeline.mov', name: '时间轴动画' },
+    { href: '/animations/exit', src: '/animations/exit.mov', name: '退出动画' }
   ]
 
   return (
-    <div className="flex flex-col justify-center pb-10 pt-8 lg:pt-40">
-      <div className="mb-8 text-center text-4xl">Demos</div>
+    <div className="flex flex-col justify-center pt-8 pb-10 lg:pt-20">
+      <div className="mb-16 text-center text-4xl">Demos</div>
 
       <div className="mx-auto grid w-[90vw] grid-cols-1 gap-4 font-bold lg:grid-cols-3">
         {arr.map((item, index) => {
@@ -37,7 +28,7 @@ export default function Page(): JSX.Element {
                     playsInline
                   />
                 </div>
-                {/* <p className="p-4 text-lg">{item.name}</p> */}
+                <p className="p-4 text-lg">{item.name}</p>
               </Link>
             </div>
           )
