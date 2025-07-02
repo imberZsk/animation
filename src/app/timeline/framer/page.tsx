@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -5,8 +6,8 @@ import MotionImage from '@/components/ui/motion-image'
 
 const Framer = () => {
   return (
-    <section className="min-h-screen overflow-x-hidden bg-black pt-52 text-center text-white">
-      <div className="absolute left-1/2 top-32 z-10 -translate-x-1/2">
+    <section className="min-h-full overflow-x-hidden bg-black pt-52 text-center text-white">
+      <div className="absolute top-32 left-1/2 z-10 -translate-x-1/2">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

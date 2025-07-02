@@ -1,3 +1,5 @@
+'use client'
+
 import { useGSAP } from '@gsap/react'
 import React, { useState, useRef } from 'react'
 import { gsap } from 'gsap'
@@ -83,8 +85,8 @@ const Gsap = () => {
   })
 
   return (
-    <section className="text-/70 relative min-h-screen w-screen overflow-x-hidden bg-black text-center">
-      <h1 className="absolute top-10 left-10">退出动画 - GSAP</h1>
+    <section className="relative min-h-full w-full overflow-x-hidden bg-black text-center text-white/70">
+      <h1 className="absolute top-10 left-10 text-white">退出动画 - GSAP</h1>
 
       <Button
         variant="outline"

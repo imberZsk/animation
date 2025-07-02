@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
@@ -27,8 +29,8 @@ const Gsap = () => {
   })
 
   return (
-    <section className="min-h-screen overflow-x-hidden bg-black pt-52 text-center text-white">
-      <div className="absolute left-1/2 top-32 z-10 -translate-x-1/2">
+    <section className="min-h-full overflow-x-hidden bg-black pt-52 text-center text-white">
+      <div className="absolute top-32 left-1/2 z-10 -translate-x-1/2">
         <Image
           src="https://fms.res.meizu.com/dms/2023/03/29/221febae-e651-410a-903f-29e0bd051ac7.png"
           alt="gsap"

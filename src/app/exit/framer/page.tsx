@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
@@ -7,8 +9,8 @@ const Framer = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <section className="text-/70 relative min-h-screen w-screen overflow-x-hidden bg-black text-center">
-      <h1 className="absolute top-10 left-10">退出动画 - Framer Motion</h1>
+    <section className="relative min-h-full w-full overflow-x-hidden bg-black text-center text-white/70">
+      <h1 className="absolute top-10 left-10 text-white">退出动画 - Framer Motion</h1>
       <Button
         variant="outline"
         className="absolute top-1/2 left-1/2 w-fit -translate-x-1/2 -translate-y-1/2 cursor-pointer text-white/90"

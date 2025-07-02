@@ -1,4 +1,5 @@
 import { Suspense } from 'react'
+import AnimationsSidebar from '@/components/animations-sidebar'
 
 export const metadata = {
   title: '退出动画',
@@ -22,7 +23,11 @@ export const metadata = {
 }
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  return <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+  return (
+    <AnimationsSidebar>
+      <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+    </AnimationsSidebar>
+  )
 }
 
 export default Layout
