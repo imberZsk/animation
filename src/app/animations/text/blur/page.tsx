@@ -1,7 +1,7 @@
-import BlurTextFramer from '../components/BlurText-Framer'
-import BlurTextGsap from '../components/BlurText-Gsap'
+import BlurTextFramer from '../../components/BlurText-Framer'
+import BlurTextGsap from '../../components/BlurText-Gsap'
 
-const BlurTextComponent = () => {
+const BlurTextPage = () => {
   return (
     <div className="flex h-full flex-col gap-4">
       {/* Framer Motion 卡片 */}
@@ -35,4 +35,4 @@ const BlurTextComponent = () => {
   )
 }
 
-export default BlurTextComponent
+export default BlurTextPage
