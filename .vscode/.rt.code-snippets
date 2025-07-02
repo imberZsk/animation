@@ -12,6 +12,48 @@
       "",
       "export default ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}"
     ],
-    "description": "rt"
+    "description": "react typescript"
+  },
+  "next image": {
+    "prefix": "ni",
+    "body": ["<Image src='' height={} width={} className='h-full w-full object-cover'  alt=''/>"],
+    "description": "next image"
+  },
+  "gsap useGSAP": {
+    "prefix": "up",
+    "body": [
+      "useGSAP(() => {",
+      "  const t1 = gsap.timeline({",
+      "    scrollTrigger: {",
+      "      trigger: '$1',",
+      "      start: '$2',",
+      "      end: '$3',",
+      "      toggleActions: 'play none none reverse',",
+      "      markers: true",
+      "    }",
+      "  })",
+      "",
+      "  t1.from('$4', {",
+      "    opacity: 0",
+      "  })",
+      "})",
+      ""
+    ],
+    "description": "gsap useGSAP"
+  },
+  "next api": {
+    "prefix": "api",
+    "body": ["export async function GET() {", "  return Response.json({ data: 'Hello World' })", "}"],
+    "description": "Api路由"
+  },
+  "useEffect": {
+    "prefix": "useE",
+    "body": ["useEffect(() => {", " ", "}, [])"],
+    "description": "useEffect"
+  },
+  "console.log": {
+    "prefix": "clg",
+    "body": ["console.log($1)"],
+    "description": "Console.log 快捷方式"
   }
 }

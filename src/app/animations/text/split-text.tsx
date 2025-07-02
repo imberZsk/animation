@@ -59,7 +59,7 @@ const SplitTextComponent = () => {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className="text-center text-4xl font-bold"
         >
-          Framer Motion 暂无文本动画
+          Framer Motion 需要手动切割文本，参考 BlurText 组件
         </motion.div>
       </div>
 
