@@ -19,7 +19,7 @@
     "@tailwindcss/typography": "^0.5.13",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.1.8",
+    "framer-motion": "^12.22.0",
     "gsap": "^3.13.0",
     "i": "^0.3.7",
     "lucide-react": "^0.378.0",
