@@ -3,10 +3,13 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import MotionImage from '@/components/ui/motion-image'
+import { AnimationSource } from '@/components/ui/animation-source'
 
 const Framer = () => {
   return (
-    <section className="min-h-full overflow-x-hidden bg-black pt-52 text-center text-white">
+    <section className="relative min-h-full overflow-x-hidden bg-black pt-52 text-center text-white">
+      {/* 源码查看按钮 */}
+      <AnimationSource currentPagePath="app/animations/timeline/framer/page.tsx" />
       <div className="absolute top-32 left-1/2 z-10 -translate-x-1/2">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

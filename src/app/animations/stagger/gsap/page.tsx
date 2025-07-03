@@ -6,6 +6,7 @@ import { Calendar, Eye } from 'lucide-react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useEffect } from 'react'
+import { AnimationSource } from '@/components/ui/animation-source'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -20,7 +21,13 @@ const StaggerGsapPage = () => {
   }, [])
 
   return (
-    <div className="flex h-full flex-col gap-4">
+    <div className="relative flex h-full flex-col gap-4">
+      {/* 源码查看按钮 */}
+      <AnimationSource
+        currentPagePath="app/animations/stagger/gsap/page.tsx"
+        componentPaths={['app/animations/stagger/const.ts']}
+      />
+
       <div className="relative flex flex-1 flex-col justify-center rounded border border-gray-700 bg-gray-900/50 p-6">
         <div className="mx-auto max-w-4xl">
           {postsConfig.map((post, index) => (

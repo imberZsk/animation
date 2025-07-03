@@ -4,12 +4,15 @@ import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { X } from 'lucide-react'
+import { AnimationSource } from '@/components/ui/animation-source'
 
 const Framer = () => {
   const [open, setOpen] = useState(false)
 
   return (
     <section className="relative min-h-full w-full overflow-x-hidden bg-black text-center text-white/70">
+      {/* 源码查看按钮 */}
+      <AnimationSource currentPagePath="app/animations/exit/framer/page.tsx" />
       <h1 className="absolute top-10 left-10 text-white">退出动画 - Framer Motion</h1>
       <Button
         variant="outline"

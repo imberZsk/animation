@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Moon, Sun } from 'lucide-react'
+import { AnimationSource } from '@/components/ui/animation-source'
 
 const Layout = () => {
   const [isDark, setIsDark] = useState(false)
@@ -10,10 +11,12 @@ const Layout = () => {
 
   return (
     <div
-      className={`flex h-full items-center justify-center transition-colors duration-300 ${
+      className={`relative flex h-full items-center justify-center transition-colors duration-300 ${
         isDark ? 'bg-gray-900' : 'bg-[#f2f4f5]'
       }`}
     >
+      {/* 源码查看按钮 */}
+      <AnimationSource currentPagePath="app/animations/layout/page.tsx" />
       <button
         className={`box-content flex h-[60px] w-[120px] cursor-pointer rounded-[60px] p-[8px] transition-colors duration-300 ${
           // 这里的切换，通过使用 layout 可以实现过渡效果

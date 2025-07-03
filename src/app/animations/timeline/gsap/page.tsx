@@ -4,6 +4,7 @@ import React from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 import Image from 'next/image'
+import { AnimationSource } from '@/components/ui/animation-source'
 
 const Gsap = () => {
   useGSAP(() => {
@@ -29,7 +30,9 @@ const Gsap = () => {
   })
 
   return (
-    <section className="min-h-full overflow-x-hidden bg-black pt-52 text-center text-white">
+    <section className="relative min-h-full overflow-x-hidden bg-black pt-52 text-center text-white">
+      {/* 源码查看按钮 */}
+      <AnimationSource currentPagePath="app/animations/timeline/gsap/page.tsx" />
       <div className="absolute top-32 left-1/2 z-10 -translate-x-1/2">
         <Image
           src="https://fms.res.meizu.com/dms/2023/03/29/221febae-e651-410a-903f-29e0bd051ac7.png"

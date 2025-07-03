@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
+import { AnimationSource } from '@/components/ui/animation-source'
 
 /**
  * ==============   Data   ================
@@ -24,7 +25,9 @@ export default function TabAnimation() {
   const [selectedTab, setSelectedTab] = useState(tabs[0])
 
   return (
-    <div className="flex h-full items-center justify-center">
+    <div className="relative flex h-full items-center justify-center">
+      {/* 源码查看按钮 */}
+      <AnimationSource currentPagePath="app/animations/tab/page.tsx" />
       <div className="flex h-[60vh] max-h-[360px] w-[480px] flex-col overflow-hidden rounded-xl bg-white">
         <nav className="h-11 rounded-t-xl border-b border-gray-200 bg-[#fdfdfd] p-[5px] px-[5px] pt-[5px] pb-0">
           <ul className="m-0 flex w-full list-none p-0 text-sm font-medium">

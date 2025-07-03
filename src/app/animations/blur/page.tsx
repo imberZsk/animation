@@ -1,9 +1,19 @@
-import BlurTextFramer from '../../components/BlurText-Framer'
-import BlurTextGsap from '../../components/BlurText-Gsap'
+import BlurTextFramer from '../components/BlurText-Framer'
+import BlurTextGsap from '../components/BlurText-Gsap'
+import { AnimationSource } from '@/components/ui/animation-source'
 
 const BlurTextPage = () => {
   return (
-    <div className="flex h-full flex-col gap-4">
+    <div className="relative flex h-full flex-col gap-4">
+      {/* 源码查看按钮 */}
+      <AnimationSource
+        currentPagePath="app/animations/blur/page.tsx"
+        componentPaths={[
+          'app/animations/components/BlurText-Framer.tsx',
+          'app/animations/components/BlurText-Gsap.tsx'
+        ]}
+      />
+
       {/* Framer Motion 卡片 */}
       <div className="relative flex flex-1 flex-col justify-center rounded border border-gray-700 bg-gray-900/50 p-6">
         <h3 className="absolute top-10 left-10 mb-2 text-sm font-medium text-gray-300">Framer Motion</h3>

@@ -6,10 +6,10 @@ interface NavigationSection {
 }
 
 export const navigationSections: NavigationSection[] = [
-  { id: 'split', name: 'Split Text - GSAP', path: '/animations/text/split', src: '/animations/split.mov' },
-  { id: 'blur', name: 'Blur Text', path: '/animations/text/blur', src: '/animations/blur.mov' },
-  { id: 'add', name: 'Add Text', path: '/animations/text/add', src: '/animations/add.mov' },
-  { id: 'shiny', name: 'Shiny Text - CSS', path: '/animations/text/shiny', src: '/animations/shiny.mov' },
+  { id: 'split', name: 'Split Text - GSAP', path: '/animations/split', src: '/animations/split.mov' },
+  { id: 'blur', name: 'Blur Text', path: '/animations/blur', src: '/animations/blur.mov' },
+  { id: 'add', name: 'Add Text', path: '/animations/add', src: '/animations/add.mov' },
+  { id: 'shiny', name: 'Shiny Text - CSS', path: '/animations/shiny', src: '/animations/shiny.mov' },
   {
     id: 'stagger-framer',
     name: 'Stagger - Framer Motion',

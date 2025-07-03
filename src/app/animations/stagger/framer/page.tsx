@@ -4,10 +4,17 @@ import { motion } from 'framer-motion'
 import { postsConfig } from '../const'
 import Link from 'next/link'
 import { Calendar, Eye } from 'lucide-react'
+import { AnimationSource } from '@/components/ui/animation-source'
 
 const StaggerFramerPage = () => {
   return (
-    <div className="flex h-full flex-col gap-4">
+    <div className="relative flex h-full flex-col gap-4">
+      {/* 源码查看按钮 */}
+      <AnimationSource
+        currentPagePath="app/animations/stagger/framer/page.tsx"
+        componentPaths={['app/animations/stagger/const.ts']}
+      />
+
       <div className="relative flex flex-1 flex-col justify-center rounded border border-gray-700 bg-gray-900/50 p-6">
         <div className="mx-auto max-w-4xl">
           {postsConfig.map((post, index) => (

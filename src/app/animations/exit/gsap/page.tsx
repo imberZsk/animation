@@ -5,6 +5,7 @@ import React, { useState, useRef } from 'react'
 import { gsap } from 'gsap'
 import { Button } from '@/components/ui/button'
 import { X } from 'lucide-react'
+import { AnimationSource } from '@/components/ui/animation-source'
 
 const Gsap = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -86,6 +87,8 @@ const Gsap = () => {
 
   return (
     <section className="relative min-h-full w-full overflow-x-hidden bg-black text-center text-white/70">
+      {/* 源码查看按钮 */}
+      <AnimationSource currentPagePath="app/animations/exit/gsap/page.tsx" />
       <h1 className="absolute top-10 left-10 text-white">退出动画 - GSAP</h1>
 
       <Button

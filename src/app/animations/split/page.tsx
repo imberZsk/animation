@@ -4,7 +4,8 @@ import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 import { SplitText } from 'gsap/SplitText'
 import { useRef } from 'react'
-import SplitTextGsap from '../../components/SplitText-Gsap'
+import SplitTextGsap from '../components/SplitText-Gsap'
+import { AnimationSource } from '@/components/ui/animation-source'
 
 gsap.registerPlugin(SplitText)
 
@@ -30,7 +31,13 @@ const SplitTextPage = () => {
   })
 
   return (
-    <div className="flex h-full flex-col gap-4">
+    <div className="relative flex h-full flex-col gap-4">
+      {/* 源码查看按钮 */}
+      <AnimationSource
+        currentPagePath="app/animations/split/page.tsx"
+        componentPaths={['app/animations/components/SplitText-Gsap.tsx']}
+      />
+
       {/* GSAP 卡片 */}
       <div className="relative flex flex-1 flex-col justify-center rounded border border-gray-700 bg-gray-900/50 p-6">
         <h3 className="absolute top-10 left-10 mb-2 text-sm font-medium text-gray-300">GSAP</h3>
