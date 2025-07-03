@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "pnpm convert-to-static && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",

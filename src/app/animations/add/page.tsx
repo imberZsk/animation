@@ -9,9 +9,6 @@ import AddTextGsap from '@/app/animations/components/AddText-Gsap'
 const AddTextPage = () => {
   return (
     <div className="relative flex h-full flex-col gap-4">
-      {}
-      
-
       {/* Framer Motion 卡片 */}
       <div className="relative flex flex-1 flex-col justify-center rounded border border-gray-700 bg-gray-900/50 p-6">
         <h3 className="absolute top-10 left-10 mb-2 text-sm font-medium text-gray-300">Framer Motion</h3>
@@ -99,15 +96,15 @@ const AddTextPage = () => {
         pageCode={PAGE_CODE}
         pageFilename="page.tsx"
         componentCodes={[
-    {
-      content: COMPONENT_CODE_0,
-      filename: 'AddText-Framer.tsx'
-    },
-    {
-      content: COMPONENT_CODE_1,
-      filename: 'AddText-Gsap.tsx'
-    }
-  ]}
+          {
+            content: COMPONENT_CODE_0,
+            filename: 'AddText-Framer.tsx'
+          },
+          {
+            content: COMPONENT_CODE_1,
+            filename: 'AddText-Gsap.tsx'
+          }
+        ]}
       />
 
       {/* Framer Motion 卡片 */}

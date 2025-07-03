@@ -83,6 +83,12 @@ function convertPage(config) {
     return
   }
 
+  // 检查是否已经转换过
+  if (pageContent.includes('AnimationSourceStatic') && pageContent.includes('const PAGE_CODE')) {
+    console.log(`⏭️  ${pagePath} already converted, skipping...`)
+    return
+  }
+
   // 读取组件内容
   const componentCodes = componentPaths
     .map((componentPath) => {
@@ -100,8 +106,12 @@ function convertPage(config) {
   // 生成页面源码常量（移除AnimationSource相关内容）
   const cleanPageContent = pageContent
     .replace(/import { AnimationSource } from '@\/components\/ui\/animation-source'\n/g, '')
+    .replace(/import { AnimationSourceStatic } from '@\/components\/ui\/animation-source-static'\n/g, '')
     .replace(/<AnimationSource[\s\S]*?\/>/g, '')
+    .replace(/<AnimationSourceStatic[\s\S]*?\/>/g, '')
     .replace(/\/\* 源码查看按钮 \*\/\s*/g, '')
+    .replace(/\/\/ 页面源码[\s\S]*?const PAGE_CODE = `[\s\S]*?`\n\n/g, '')
+    .replace(/\/\/ .*?源码[\s\S]*?const COMPONENT_CODE_\d+ = `[\s\S]*?`\n\n/g, '')
     .replace(/^\s*\/\*[\s\S]*?\*\/\s*$/gm, '') // 移除注释块
     .trim()
 
@@ -116,10 +126,14 @@ function convertPage(config) {
     "import { AnimationSourceStatic } from '@/components/ui/animation-source-static'"
   )
 
-  // 在第一个 const 声明前添加源码常量
-  const firstConstMatch = newContent.match(/^const /m)
-  if (firstConstMatch) {
-    const insertIndex = newContent.indexOf(firstConstMatch[0])
+  // 清理现有的源码常量
+  newContent = newContent.replace(/\/\/ 页面源码[\s\S]*?const PAGE_CODE = `[\s\S]*?`\n\n/g, '')
+  newContent = newContent.replace(/\/\/ .*?源码[\s\S]*?const COMPONENT_CODE_\d+ = `[\s\S]*?`\n\n/g, '')
+
+  // 在第一个 const 或函数声明前添加源码常量
+  const insertMatch = newContent.match(/^(const |function |export |class )/m)
+  if (insertMatch) {
+    const insertIndex = newContent.indexOf(insertMatch[0])
 
     let sourceCodeConstants = `// 页面源码\nconst PAGE_CODE = \`${escapedPageContent}\`\n\n`
 
@@ -134,13 +148,18 @@ function convertPage(config) {
 
   // 替换 AnimationSource 使用
   const animationSourceRegex = /<AnimationSource[\s\S]*?\/>/g
+  const animationSourceStaticRegex = /<AnimationSourceStatic[\s\S]*?\/>/g
+
   let componentCodesArray = '[]'
 
   if (componentCodes.length > 0) {
     const componentItems = componentCodes
-      .map((comp, index) => `    {\n      content: COMPONENT_CODE_${index},\n      filename: '${comp.filename}'\n    }`)
+      .map(
+        (comp, index) =>
+          `          {\n            content: COMPONENT_CODE_${index},\n            filename: '${comp.filename}'\n          }`
+      )
       .join(',\n')
-    componentCodesArray = `[\n${componentItems}\n  ]`
+    componentCodesArray = `[\n${componentItems}\n        ]`
   }
 
   const staticSourceComponent = `<AnimationSourceStatic
@@ -150,6 +169,7 @@ function convertPage(config) {
       />`
 
   newContent = newContent.replace(animationSourceRegex, staticSourceComponent)
+  newContent = newContent.replace(animationSourceStaticRegex, staticSourceComponent)
 
   // 写入新文件
   fs.writeFileSync(pagePath, newContent, 'utf-8')
