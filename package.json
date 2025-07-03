@@ -5,12 +5,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "pnpm convert-to-static && next build",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
-    "preinstall": "node ./src/lib/preinstall.js"
+    "preinstall": "node ./src/lib/preinstall.js",
+    "convert-to-static": "node scripts/convert-to-static.js"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
