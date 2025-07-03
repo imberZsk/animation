@@ -17,6 +17,15 @@ interface NavigationSection {
 
 const navigationSections: NavigationSection[] = [
   {
+    title: 'Text Animations',
+    tabs: [
+      { id: 'split', name: 'Split Text', path: '/animations/text/split' },
+      { id: 'blur', name: 'Blur Text', path: '/animations/text/blur' },
+      { id: 'add', name: 'Add Text', path: '/animations/text/add' },
+      { id: 'shiny', name: 'Shiny Text', path: '/animations/text/shiny' }
+    ]
+  },
+  {
     title: 'Timeline Animations',
     tabs: [
       { id: 'timeline-framer', name: 'Framer Motion', path: '/timeline/framer' },
@@ -28,15 +37,6 @@ const navigationSections: NavigationSection[] = [
     tabs: [
       { id: 'exit-framer', name: 'Framer Motion', path: '/exit/framer' },
       { id: 'exit-gsap', name: 'GSAP', path: '/exit/gsap' }
-    ]
-  },
-  {
-    title: 'Text Animations',
-    tabs: [
-      { id: 'split', name: 'Split Text', path: '/animations/text/split' },
-      { id: 'blur', name: 'Blur Text', path: '/animations/text/blur' },
-      { id: 'add', name: 'Add Text', path: '/animations/text/add' },
-      { id: 'shiny', name: 'Shiny Text', path: '/animations/text/shiny' }
     ]
   }
 ]
@@ -51,16 +51,7 @@ export default function AnimationsSidebar({ children }: AnimationsSidebarProps) 
   return (
     <div className="flex h-screen bg-black/80">
       {/* 左侧菜单栏 */}
-      <div className="w-60 overflow-y-auto border-r border-gray-700 bg-black/80 p-3 pt-6">
-        {/* 返回首页按钮 */}
-        <Link
-          href="/"
-          className="mb-4 flex w-full items-center gap-2 rounded-lg border border-gray-700 bg-gray-900 px-4 py-2.5 text-sm text-gray-300 transition-all duration-200 hover:border-gray-600 hover:bg-gray-800 hover:text-white"
-        >
-          <Home className="h-4 w-4" />
-          <span>返回首页</span>
-        </Link>
-
+      <div className="relative w-60 overflow-y-auto border-r border-gray-700 bg-black/80 p-3 pt-6">
         <h2 className="mb-6 text-sm font-medium text-gray-200">Animations</h2>
         <nav className="space-y-4">
           {navigationSections.map((section) => (
@@ -87,6 +78,15 @@ export default function AnimationsSidebar({ children }: AnimationsSidebarProps) 
             </div>
           ))}
         </nav>
+
+        {/* 返回首页按钮 */}
+        <Link
+          href="/"
+          className="absolute bottom-10 left-1/2 mt-4 flex w-fit -translate-x-1/2 items-center gap-2 rounded-lg border border-gray-700 bg-gray-900 px-4 py-2.5 text-sm text-gray-300 transition-all duration-200 hover:border-gray-600 hover:bg-gray-800 hover:text-white"
+        >
+          <Home className="h-4 w-4" />
+          <span>返回首页</span>
+        </Link>
       </div>
 
       {/* 右侧内容区域 */}
