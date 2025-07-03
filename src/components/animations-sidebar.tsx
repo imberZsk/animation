@@ -3,43 +3,7 @@
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { Home } from 'lucide-react'
-
-interface NavigationTab {
-  id: string
-  name: string
-  path: string
-}
-
-interface NavigationSection {
-  title: string
-  tabs: NavigationTab[]
-}
-
-const navigationSections: NavigationSection[] = [
-  {
-    title: 'Text Animations',
-    tabs: [
-      { id: 'split', name: 'Split Text', path: '/animations/text/split' },
-      { id: 'blur', name: 'Blur Text', path: '/animations/text/blur' },
-      { id: 'add', name: 'Add Text', path: '/animations/text/add' },
-      { id: 'shiny', name: 'Shiny Text', path: '/animations/text/shiny' }
-    ]
-  },
-  {
-    title: 'Timeline Animations',
-    tabs: [
-      { id: 'timeline-framer', name: 'Framer Motion', path: '/timeline/framer' },
-      { id: 'timeline-gsap', name: 'GSAP', path: '/timeline/gsap' }
-    ]
-  },
-  {
-    title: 'Exit Animations',
-    tabs: [
-      { id: 'exit-framer', name: 'Framer Motion', path: '/exit/framer' },
-      { id: 'exit-gsap', name: 'GSAP', path: '/exit/gsap' }
-    ]
-  }
-]
+import { navigationSections } from '@/app/const'
 
 interface AnimationsSidebarProps {
   children: React.ReactNode
@@ -54,29 +18,24 @@ export default function AnimationsSidebar({ children }: AnimationsSidebarProps) 
       <div className="relative w-60 overflow-y-auto border-r border-gray-700 bg-black/80 p-3 pt-6">
         <h2 className="mb-6 text-sm font-medium text-gray-200">Animations</h2>
         <nav className="space-y-4">
-          {navigationSections.map((section) => (
-            <div key={section.title}>
-              <h3 className="mb-2 text-xs font-medium tracking-wider text-gray-400 uppercase">{section.title}</h3>
-              <div className="ml-2 space-y-1.5">
-                {section.tabs.map((tab) => {
-                  const isActive = pathname === tab.path
-                  return (
-                    <Link
-                      key={tab.id}
-                      href={tab.path}
-                      className={`block w-full cursor-pointer rounded px-3 py-1.5 text-left text-sm transition-colors ${
-                        isActive
-                          ? 'bg-gray-200 font-medium text-black'
-                          : 'text-gray-400 hover:bg-gray-800 hover:text-gray-200'
-                      }`}
-                    >
-                      {tab.name}
-                    </Link>
-                  )
-                })}
-              </div>
-            </div>
-          ))}
+          <div className="ml-2 space-y-1.5">
+            {navigationSections.map((tab, index) => {
+              const isActive = pathname === tab.path
+              return (
+                <Link
+                  key={tab.id + index}
+                  href={tab.path}
+                  className={`block w-full cursor-pointer rounded px-3 py-1.5 text-left text-sm transition-colors ${
+                    isActive
+                      ? 'bg-gray-200 font-medium text-black'
+                      : 'text-gray-400 hover:bg-gray-800 hover:text-gray-200'
+                  }`}
+                >
+                  {tab.name}
+                </Link>
+              )
+            })}
+          </div>
         </nav>
 
         {/* 返回首页按钮 */}
