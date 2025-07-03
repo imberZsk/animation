@@ -2,6 +2,8 @@
 
 一个基于 **Framer Motion** 和 **GSAP** 的现代动画效果展示库，提供丰富的动画示例和实现方案。
 
+![screenshot](/public/screenshot.png)
+
 ## ✨ 特性
 
 - 🎯 **双技术栈支持** - 同时展示 Framer Motion 和 GSAP 实现方案
