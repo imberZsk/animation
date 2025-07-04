@@ -123,17 +123,17 @@ const COMPONENT_CODE_0 = `export const postsConfig = [
 
 const StaggerFramerPage = () => {
   return (
-    <div className="relative flex h-full flex-col gap-4">
+    <div className="relative flex h-screen flex-col gap-4">
       {/* 源码查看按钮 */}
       <AnimationSourceStatic
         pageCode={PAGE_CODE}
         pageFilename="page.tsx"
         componentCodes={[
-    {
-      content: COMPONENT_CODE_0,
-      filename: 'const.ts'
-    }
-  ]}
+          {
+            content: COMPONENT_CODE_0,
+            filename: 'const.ts'
+          }
+        ]}
       />
 
       <div className="relative flex flex-1 flex-col justify-center rounded border border-gray-700 bg-gray-900/50 p-6">

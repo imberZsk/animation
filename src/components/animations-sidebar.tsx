@@ -15,7 +15,7 @@ export default function AnimationsSidebar({ children }: AnimationsSidebarProps) 
   return (
     <div className="flex h-screen bg-black/80">
       {/* 左侧菜单栏 */}
-      <div className="relative w-60 overflow-y-auto border-r border-gray-700 bg-black/80 p-3 pt-6">
+      <div className="fixed top-0 left-0 z-10 h-screen w-60 overflow-y-auto border-r border-gray-700 bg-black p-3 pt-6">
         <h2 className="mb-6 text-sm font-medium text-gray-200">Animations</h2>
         <nav className="space-y-4">
           <div className="ml-2 space-y-1.5">
@@ -49,7 +49,7 @@ export default function AnimationsSidebar({ children }: AnimationsSidebarProps) 
       </div>
 
       {/* 右侧内容区域 */}
-      <div className="flex-1 bg-black/80 p-6">{children}</div>
+      <div className="h-fit min-h-screen flex-1 bg-black/80 pl-60">{children}</div>
     </div>
   )
 }

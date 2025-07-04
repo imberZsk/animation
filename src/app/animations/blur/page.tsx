@@ -261,21 +261,21 @@ export default BlurTextGsap
 
 const BlurTextPage = () => {
   return (
-    <div className="relative flex h-full flex-col gap-4">
+    <div className="relative flex h-screen flex-col gap-4">
       {/* 源码查看按钮 */}
       <AnimationSourceStatic
         pageCode={PAGE_CODE}
         pageFilename="page.tsx"
         componentCodes={[
-    {
-      content: COMPONENT_CODE_0,
-      filename: 'BlurText-Framer.tsx'
-    },
-    {
-      content: COMPONENT_CODE_1,
-      filename: 'BlurText-Gsap.tsx'
-    }
-  ]}
+          {
+            content: COMPONENT_CODE_0,
+            filename: 'BlurText-Framer.tsx'
+          },
+          {
+            content: COMPONENT_CODE_1,
+            filename: 'BlurText-Gsap.tsx'
+          }
+        ]}
       />
 
       {/* Framer Motion 卡片 */}

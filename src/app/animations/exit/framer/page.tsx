@@ -88,13 +88,9 @@ const Framer = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <section className="relative min-h-full w-full overflow-x-hidden bg-black text-center text-white/70">
+    <section className="relative h-screen w-full overflow-x-hidden bg-black text-center text-white/70">
       {/* 源码查看按钮 */}
-      <AnimationSourceStatic
-        pageCode={PAGE_CODE}
-        pageFilename="page.tsx"
-        componentCodes={[]}
-      />
+      <AnimationSourceStatic pageCode={PAGE_CODE} pageFilename="page.tsx" componentCodes={[]} />
       <h1 className="absolute top-10 left-10 text-white">退出动画 - Framer Motion</h1>
       <Button
         variant="outline"

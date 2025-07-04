@@ -52,6 +52,18 @@ const PAGES_TO_CONVERT = [
   {
     pagePath: 'src/app/animations/timeline/gsap/page.tsx',
     componentPaths: []
+  },
+  {
+    pagePath: 'src/app/animations/scroll/gsap/page.tsx',
+    componentPaths: []
+  },
+  {
+    pagePath: 'src/app/animations/scrub/gsap/page.tsx',
+    componentPaths: []
+  },
+  {
+    pagePath: 'src/app/animations/pin/gsap/page.tsx',
+    componentPaths: []
   }
 ]
 

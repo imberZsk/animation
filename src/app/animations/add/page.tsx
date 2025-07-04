@@ -90,7 +90,7 @@ export default AddTextGsap
 
 const AddTextPage = () => {
   return (
-    <div className="relative flex h-full flex-col gap-4">
+    <div className="relative flex h-screen flex-col gap-4">
       {/* 源码查看按钮 */}
       <AnimationSourceStatic
         pageCode={PAGE_CODE}

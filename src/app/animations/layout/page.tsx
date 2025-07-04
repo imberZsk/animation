@@ -68,16 +68,12 @@ const Layout = () => {
 
   return (
     <div
-      className={`relative flex h-full items-center justify-center transition-colors duration-300 ${
+      className={`relative flex h-screen items-center justify-center transition-colors duration-300 ${
         isDark ? 'bg-gray-900' : 'bg-[#f2f4f5]'
       }`}
     >
       {/* 源码查看按钮 */}
-      <AnimationSourceStatic
-        pageCode={PAGE_CODE}
-        pageFilename="page.tsx"
-        componentCodes={[]}
-      />
+      <AnimationSourceStatic pageCode={PAGE_CODE} pageFilename="page.tsx" componentCodes={[]} />
       <button
         className={`box-content flex h-[60px] w-[120px] cursor-pointer rounded-[60px] p-[8px] transition-colors duration-300 ${
           // 这里的切换，通过使用 layout 可以实现过渡效果

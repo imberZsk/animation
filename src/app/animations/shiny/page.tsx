@@ -49,17 +49,17 @@ export default ShinyText
 
 const ShinyTextPage = () => {
   return (
-    <div className="relative flex h-full flex-col gap-4">
+    <div className="relative flex h-screen flex-col gap-4">
       {/* 源码查看按钮 */}
       <AnimationSourceStatic
         pageCode={PAGE_CODE}
         pageFilename="page.tsx"
         componentCodes={[
-    {
-      content: COMPONENT_CODE_0,
-      filename: 'ShinyText.tsx'
-    }
-  ]}
+          {
+            content: COMPONENT_CODE_0,
+            filename: 'ShinyText.tsx'
+          }
+        ]}
       />
 
       <div className="relative flex flex-1 flex-col justify-center rounded border border-gray-700 bg-gray-900/50 p-6">

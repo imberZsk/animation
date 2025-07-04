@@ -21,13 +21,13 @@ export const navigationSections: NavigationSection[] = [
     id: 'timeline-framer',
     name: 'Timeline - Framer Motion',
     path: '/animations/timeline/framer',
-    src: '/animations/timeline.mov'
+    src: '/animations/timeline.mp4'
   },
   {
     id: 'timeline-gsap',
     name: 'Timeline - GSAP',
     path: '/animations/timeline/gsap',
-    src: '/animations/timeline.mov'
+    src: '/animations/timeline.mp4'
   },
   {
     id: 'exit-framer',
@@ -38,19 +38,18 @@ export const navigationSections: NavigationSection[] = [
   { id: 'exit-gsap', name: 'Exit - GSAP', path: '/animations/exit/gsap', src: '/animations/exit.mov' },
   { id: 'layout', name: 'Layout - Framer Motion', path: '/animations/layout', src: '/animations/layout.mov' },
   { id: 'tab', name: 'Tab - Framer Motion', path: '/animations/tab', src: '/animations/tab.mov' },
-  { id: 'scroll', name: 'Scroll - GSAP', path: '/animations/scroll/gsap', src: '/animations/scroll.mov' },
-  { id: 'scroll', name: 'Scroll - Framer Motion', path: '/animations/scroll/framer', src: '/animations/scroll.mov' },
-  { id: 'fade', name: 'Fade - GSAP', path: '/animations/fade/gsap', src: '/animations/fade.mov' },
-  { id: 'fade', name: 'Fade - Framer Motion', path: '/animations/fade/framer', src: '/animations/fade.mov' },
-  { id: 'pin', name: 'Pin - GSAP', path: '/animations/pin/gsap', src: '/animations/pin.mov' },
-  { id: 'pin', name: 'Pin - Framer Motion', path: '/animations/pin/framer', src: '/animations/pin.mov' },
-  { id: 'parallax', name: 'Parallax - GSAP', path: '/animations/parallax/gsap', src: '/animations/parallax.mov' },
-  {
-    id: 'parallax',
-    name: 'Parallax - Framer Motion',
-    path: '/animations/parallax/framer',
-    src: '/animations/parallax.mov'
-  },
-  { id: 'svg', name: 'SVG - GSAP', path: '/animations/svg/gsap', src: '/animations/svg.mov' },
-  { id: 'svg', name: 'SVG - Framer Motion', path: '/animations/svg/framer', src: '/animations/svg.mov' }
+  { id: 'scroll', name: 'Scroll - GSAP', path: '/animations/scroll/gsap', src: '/animations/scroll.mp4' },
+  // { id: 'scroll', name: 'Scroll - Framer Motion', path: '/animations/scroll/framer', src: '/animations/scroll.mp4' },
+  { id: 'scrub', name: 'Scrub - GSAP', path: '/animations/scrub/gsap', src: '/animations/scrub.mp4' },
+  { id: 'pin', name: 'Pin - GSAP', path: '/animations/pin/gsap', src: '/animations/pin.mp4' },
+  // { id: 'pin', name: 'Pin - Framer Motion', path: '/animations/pin/framer', src: '/animations/pin.mov' },
+  { id: 'parallax', name: 'Parallax - GSAP', path: '/animations/parallax/gsap', src: '/animations/parallax.mp4' },
+  // {
+  //   id: 'parallax',
+  //   name: 'Parallax - Framer Motion',
+  //   path: '/animations/parallax/framer',
+  //   src: '/animations/parallax.mov'
+  // },
+  { id: 'svg', name: 'SVG - GSAP', path: '/animations/svg/gsap', src: '/animations/svg.mp4' }
+  // { id: 'svg', name: 'SVG - Framer Motion', path: '/animations/svg/framer', src: '/animations/svg.mov' }
 ]
