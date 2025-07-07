@@ -37,6 +37,7 @@ export const navigationSections: NavigationSection[] = [
   },
   { id: 'exit-gsap', name: 'Exit - GSAP', path: '/animations/exit/gsap', src: '/animations/exit.mov' },
   { id: 'layout', name: 'Layout - Framer Motion', path: '/animations/layout', src: '/animations/layout.mov' },
+  { id: 'flip', name: 'Flip - GSAP', path: '/animations/flip', src: '/animations/flip.mp4' },
   { id: 'tab', name: 'Tab - Framer Motion', path: '/animations/tab', src: '/animations/tab.mov' },
   { id: 'scroll', name: 'Scroll - GSAP', path: '/animations/scroll/gsap', src: '/animations/scroll.mp4' },
   // { id: 'scroll', name: 'Scroll - Framer Motion', path: '/animations/scroll/framer', src: '/animations/scroll.mp4' },
