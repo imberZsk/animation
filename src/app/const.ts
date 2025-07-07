@@ -45,13 +45,14 @@ export const navigationSections: NavigationSection[] = [
   { id: 'vertical', name: 'Vertical - GSAP', path: '/animations/vertical', src: '/animations/vertical.mp4' },
   { id: 'horizontal', name: 'Horizontal - GSAP', path: '/animations/horizontal', src: '/animations/horizontal.mp4' },
   // { id: 'pin', name: 'Pin - Framer Motion', path: '/animations/pin/framer', src: '/animations/pin.mov' },
-  { id: 'parallax', name: 'Parallax - GSAP', path: '/animations/parallax/gsap', src: '/animations/parallax.mp4' },
+
+  { id: 'parallax', name: 'Parallax - GSAP', path: '/animations/parallax/gsap', src: '/animations/parallax.mp4' }
   // {
   //   id: 'parallax',
   //   name: 'Parallax - Framer Motion',
   //   path: '/animations/parallax/framer',
   //   src: '/animations/parallax.mov'
   // },
-  { id: 'svg', name: 'SVG - GSAP', path: '/animations/svg/gsap', src: '/animations/svg.mp4' }
+  // { id: 'svg', name: 'SVG - GSAP', path: '/animations/svg/gsap', src: '/animations/svg.mp4' }
   // { id: 'svg', name: 'SVG - Framer Motion', path: '/animations/svg/framer', src: '/animations/svg.mov' }
 ]
