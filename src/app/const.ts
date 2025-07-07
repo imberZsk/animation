@@ -42,6 +42,8 @@ export const navigationSections: NavigationSection[] = [
   // { id: 'scroll', name: 'Scroll - Framer Motion', path: '/animations/scroll/framer', src: '/animations/scroll.mp4' },
   { id: 'scrub', name: 'Scrub - GSAP', path: '/animations/scrub/gsap', src: '/animations/scrub.mp4' },
   { id: 'pin', name: 'Pin - GSAP', path: '/animations/pin/gsap', src: '/animations/pin.mp4' },
+  { id: 'vertical', name: 'Vertical - GSAP', path: '/animations/vertical', src: '/animations/vertical.mp4' },
+  { id: 'horizontal', name: 'Horizontal - GSAP', path: '/animations/horizontal', src: '/animations/horizontal.mp4' },
   // { id: 'pin', name: 'Pin - Framer Motion', path: '/animations/pin/framer', src: '/animations/pin.mov' },
   { id: 'parallax', name: 'Parallax - GSAP', path: '/animations/parallax/gsap', src: '/animations/parallax.mp4' },
   // {
