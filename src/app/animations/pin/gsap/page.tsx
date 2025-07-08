@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { data } from './const'
+import { data } from '../const'
 import { AnimationSourceStatic } from '@/components/ui/animation-source-static'
 
 // 页面源码
@@ -166,16 +166,12 @@ export default function Page() {
     })
 
     // 第二组气泡在第一组完成后从左侧依次进入
-    t1.to(
-      ['.bubble4', '.bubble5', '.bubble6'],
-      {
-        x: '0%',
-        autoAlpha: 1,
-        stagger: 0.5, // 每个元素间隔0.5秒
-        duration: 0.6
-      },
-      '+=0.3'
-    ) // 在上一个动画完成后延迟0.3秒开始
+    t1.to(['.bubble4', '.bubble5', '.bubble6'], {
+      x: '0%',
+      autoAlpha: 1,
+      stagger: 0.5, // 每个元素间隔0.5秒
+      duration: 0.6
+    })
   })
 
   return (
